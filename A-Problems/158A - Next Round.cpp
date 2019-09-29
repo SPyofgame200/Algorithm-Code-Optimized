@@ -1,23 +1,26 @@
 #include <iostream>
- 
+#include <algorithm>
+
 using namespace std;
- 
-int main(){
+
+bool cmp(int a, int b) {
+    return a > b;
+}
+
+int main() {
     int n, k;
     cin >> n >> k;
- 
-    int x, cnt = 0;
-    for (int i = 0; i < k; ++i) {
-        cin >> x;
-        cnt += (x > 0); /// x must greater than 0
-    }
- 
-    int pre = x;
-    for (int i = k; i < n; ++i) {
-        cin >> x;
-        cnt += (x == pre && pre); /// if the i-th contestant has equal score
-    }
- 
+
+    int a[n];
+    for (int i = 0; i < n; ++i)
+        cin >> a[i];
+
+    sort(a, a + n, cmp); /// Decreasing sort
+
+    int cnt = 0;
+    while ((a[cnt] >= a[k - 1]) && (cnt < n) && (a[cnt] != 0))
+        ++cnt;
+
     cout << cnt;
     return 0;
 }
