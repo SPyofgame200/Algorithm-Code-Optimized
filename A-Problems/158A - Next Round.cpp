@@ -1,28 +1,26 @@
 #include <iostream>
-#include <stdio.h>     
-#include <stdlib.h>   
- 
+#include <algorithm>
+
 using namespace std;
- 
-int compare (const void * a, const void * b)
-{
-    return -( *(int*)a - *(int*)b );
+
+bool cmp(int a, int b) {
+    return a > b;
 }
- 
-int main ()
-{
-    int n,k,arr[50] = {};
+
+int main() {
+    int n, k;
     cin >> n >> k;
-    for (int i = 0; i < n; ++i) {
-        cin >> arr[i];
-    }
-    
-    int count = 0;
-    qsort (arr, n, sizeof(int), compare);
-    for (int i = 0; i < n; ++i) {
-        if ((arr[i] <= 0) || (arr[i] < arr[k-1])) break;
-        ++count;
-    }
-    cout << count;
+
+    int a[n];
+    for (int i = 0; i < n; ++i)
+        cin >> a[i];
+
+    sort(a, a + n, cmp); /// Decreasing sort
+
+    int cnt = 0;
+    while ((a[cnt] >= a[k - 1]) && (cnt < n) && (a[cnt] != 0))
+        ++cnt;
+
+    cout << cnt;
     return 0;
 }
