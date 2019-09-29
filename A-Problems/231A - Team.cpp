@@ -3,13 +3,16 @@
 using namespace std;
  
 int main() {
-    int x,n,s,count=0;
+    int n;
     cin >> n;
+ 
+    int cnt = 0;
     for (int i = 0; i < n; ++i) {
-        s=0;
-        cin >> x;s+=x;cin >> x;s+=x;cin >> x;s+=x;
-        if (s > 1) ++count;
+        int a, b, c;
+        cin >> a >> b >> c;
+        cnt += (a + b + c >= 2);
     }
-    cout << count;
+ 
+    cout << cnt;
     return 0;
 }
