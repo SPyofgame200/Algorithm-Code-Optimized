@@ -11,8 +11,8 @@ int main() {
     long long len = pred-1;
     while (--m) {
         cin >> x;
-        len+=x-pred;
-        if (x < pred) len+=n;
+        len += x - pred;
+        if (x < pred) len += n;
         pred = x;
     }
  
