@@ -12,7 +12,7 @@ int main() {
         else if (check[1]!=true) { if (s[i]=='e') check[1] = true; } 
         else if (check[2]!=true) { if (s[i]=='l') check[2] = true; } 
         else if (check[3]!=true) { if (s[i]=='l') check[3] = true; } 
-        else if (s[i]=='o') {
+        else if (s[i] == 'o') {
             cout << "YES";
             return 0;
         } 
