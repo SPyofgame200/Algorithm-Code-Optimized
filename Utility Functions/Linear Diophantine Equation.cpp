@@ -15,7 +15,8 @@ int sign(int x) { return (x < 0 ? -1 : x && 1); }
 int abs(int x)  { return (x < 0 ? -x : x); }
 
 /// Extended GCD
-int extgcd(int a, int b, int &x, int &y) {
+int extgcd(int a, int b, int &x, int &y)
+{
     if (b == 0)
         return x = 1, y = 0, a;
 
@@ -25,7 +26,8 @@ int extgcd(int a, int b, int &x, int &y) {
 }
 
 /// Linear Diophantine Equation
-int dio_eq(int a, int b, int c, int &x, int &y) {
+int dio_eq(int a, int b, int c, int &x, int &y)
+{
     int d = extgcd(abs(a), abs(b), x, y);
     if (c % d)
         return false;
@@ -36,7 +38,8 @@ int dio_eq(int a, int b, int c, int &x, int &y) {
 }
 
 /// Driver
-int main() {
+int main()
+{
     int a, b, c;
     cin >> a >> b >> c;
 
