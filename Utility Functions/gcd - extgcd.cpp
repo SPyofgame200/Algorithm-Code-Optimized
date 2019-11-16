@@ -1,6 +1,8 @@
 /// Author: SPyofgame
-/// Project: Greatest Common Divisor (gcd)
-/// Project: Extended GCD (extgcd)
+/// Complexity <Time, Auxiliary space> = F<T, S>
+///         Problems                 Functions          Complexity
+/// Greatest Common Divisor     -     gcd        -    F<O(log n), O(1)>
+/// Extended GCD                -     extgcd     -    F<O(log n), O(1)>
 
 #include <iostream>
 
