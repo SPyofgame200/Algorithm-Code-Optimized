@@ -1,3 +1,9 @@
+/// Author: SPyofgame
+/// Complexity <Time, Auxiliary space> = F<T, S>
+///         Problems               Functions          Complexity
+/// Greatest Common Divisor     -     gcd     -    F<O(log(a + b))  , O(1)>
+/// Binomial Coefficient        -     ncr     -    F<O(min(r, n - r), O(1)>
+
 #include <iostream>
 
 using namespace std;
