@@ -1,10 +1,10 @@
 /// Author: SPyofgame
 /// Complexity <Time, Auxiliary space> = F<T, S>
 ///            Problems                   Functions                 Complexity
-/// Sign of number              -   sign(x)                   -   F<O(1), O(1)>
-/// Absolute value              -   abs(x)                    -   F<O(1), O(1)>
-/// Extended GCD                -   extgcd(a, b, &x, &y)      -   F<O(log n), O(1)>
-/// Linear Diophantine Equation -   dio_eq(a, b, c, &x, &y)   -   F(O(log n), O(1)>
+/// Sign of number              -   sign(x)                   -   F< O(1), O(1 )>
+/// Absolute value              -   abs(x)                    -   F< O(1), O(1) >
+/// Extended GCD                -   extgcd(a, b, &x, &y)      -   F< O(log n), O(1) >
+/// Linear Diophantine Equation -   dio_eq(a, b, c, &x, &y)   -   F( O(log n), O(1) >
 
 #include <iostream>
 
