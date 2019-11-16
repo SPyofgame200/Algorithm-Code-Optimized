@@ -28,10 +28,9 @@ int extgcd(int a, int b, int &x, int &y) {
 //
 //
 /// Check 2 functions' results
-void compare()
+bool compare(int n, int m)
 {
-    int n, m;
-    cin >> n >> m;
+    bool ok = true;
     for (int i = 0; i <= n; ++i)
     {
         for (int j = 0; j <= m; ++j)
@@ -40,9 +39,13 @@ void compare()
             int p = extgcd(i, j, x, y);
             int q = gcd(i, j);
             if (p != q)
+            {
                 cout << "gcd(" << i << ", " << j << ") = " << p << " != " << q << " _ " << x << " _ " << y << endl;
+                ok = false;
+            }
         }
     }
+    return ok;
 }
 /// Check 2 functions' results
 //
