@@ -1,7 +1,7 @@
 /// Author: SPyofgame
 /// Complexity <Time, Auxiliary space> = F<T, S>
 ///         Problems           Functions              Complexity
-/// Binomial Coefficient   -   nck(n, k)   -   F<O(min(k, n - k), O(1)>
+/// Binomial Coefficient   -   nck(n, k)   -   F< O(min(k, n - k), O(1) >
 
 #include <iostream>
 
