@@ -7,7 +7,8 @@
 
 using namespace std;
 
-int nck(int n, int k) {
+int nck(int n, int k)
+{
     int res = 1;
     if (k > n - k)
         k = n - k;
@@ -20,7 +21,8 @@ int nck(int n, int k) {
     return res;
 }
 
-int main() {
+int main()
+{
     int n, k;
     cin >> n >> k;
     cout << nck(n, k);
