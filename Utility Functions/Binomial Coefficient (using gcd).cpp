@@ -8,11 +8,13 @@
 
 using namespace std;
 
-int gcd(int a, int b) {
+int gcd(int a, int b)
+{
     return (b ? gcd(b, a % b) : a);
 }
 
-int ncr(int n, int r) {
+int ncr(int n, int r)
+{
     int p = 1, k = 1, m = 1;
     if (r > n - r)
         r = n - r;
@@ -26,7 +28,8 @@ int ncr(int n, int r) {
     return p;
 }
 
-int main() {
+int main()
+{
     int n, r;
     cin >> n >> r;
     cout << ncr(n, r);
