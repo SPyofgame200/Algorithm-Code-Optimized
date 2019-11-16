@@ -10,7 +10,7 @@
 
 using namespace std;
 
-/// Utility Funtions
+/// Utility Functions
 int sign(int x) { return (x < 0 ? -1 : x && 1); }
 int abs(int x)  { return (x < 0 ? -x : x); }
 
@@ -26,22 +26,28 @@ int extgcd(int a, int b, int &x, int &y) {
 
 /// Linear Diophantine Equation
 int dio_eq(int a, int b, int c, int &x, int &y) {
-    int g = extgcd(abs(a), abs(b), x, y);
-    if (c % g)
+    int d = extgcd(abs(a), abs(b), x, y);
+    if (c % d)
         return false;
 
-    x *= sign(a) * c / g;
-    y *= sign(b) * c / g;
-    return g;
+    x *= sign(a) * c / d;
+    y *= sign(b) * c / d;
+    return d;
 }
 
 /// Driver
 int main() {
     int a, b, c;
     cin >> a >> b >> c;
+
     int x, y;
-    dio_eq(a, b, c, x, y);
-    cout << a << " * " << x << " + " << b << " * " << y << " = " << c << endl;
+    int d = dio_eq(a, b, c, x, y);
+    if (d)
+        cout << a << " * " << x << " + " << b << " * " << y << " = " << c << endl;
+    else
+        cout << "Cant find any pair of integer roots" << endl;
     return 0;
 }
+
+
 
