@@ -1,8 +1,8 @@
 /// Author: SPyofgame
 /// Complexity <Time, Auxiliary space> = F<T, S>
 ///         Problems                   Functions                 Complexity
-/// Greatest Common Divisor   -   gcd(a, b)              -    F<O(log n), O(1)>
-/// Extended GCD              -   extgcd(a, b, &x, &y)   -    F<O(log n), O(1)>
+/// Greatest Common Divisor   -   gcd(a, b)              -    F< O(log n), O(1) >
+/// Extended GCD              -   extgcd(a, b, &x, &y)   -    F< O(log n), O(1) >
 
 #include <iostream>
 
